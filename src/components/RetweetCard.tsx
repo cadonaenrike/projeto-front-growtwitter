@@ -12,7 +12,7 @@ import {
 } from './StyledComponents/CardTwittesStyled';
 import LikeButton from './LikeButton';
 import { CardRetweetFather, FatherCardRetweet } from './StyledComponents/CardRetweetFather';
-
+import replayImg from '../public/light_color/icone_responder.svg';
 interface RetweetListProps {
   tweet: TweetDTO;
 }
@@ -65,7 +65,7 @@ const RetweetList: React.FC<RetweetListProps> = ({ tweet }) => {
     <div>
       <FatherButtonsCards>
         <FatherButtonRetweetCards>
-          <img src="./src/public/light_color/icone_responder.svg" alt="Criar Retweet" onClick={handleCreateRetweet} />
+          <img src={replayImg} alt="Criar Retweet" onClick={handleCreateRetweet} />
         </FatherButtonRetweetCards>
         <FatherButtonLikesCards>
           <LikeButton tweet={tweet} />
