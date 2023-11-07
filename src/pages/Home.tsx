@@ -1,12 +1,11 @@
 import React from 'react';
 import CardTwittes from '../components/CardsTwittes';
 import DefaultLayout from '../config/layout/DefaultLayot';
-import { useNavigate } from 'react-router-dom';
+import { redirect } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const userId = localStorage.getItem('usuarioId');
   const session = sessionStorage.getItem('token');
-  const navigate = useNavigate();
   if (userId != null && session != null) {
     return (
       <DefaultLayout>
@@ -15,7 +14,7 @@ const Home: React.FC = () => {
       </DefaultLayout>
     );
   } else {
-    navigate('/login');
+    redirect('/login');
   }
 };
 
