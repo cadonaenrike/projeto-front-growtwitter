@@ -11,7 +11,7 @@ export interface UserDTO {
 }
 
 export interface TweetDTO {
-  Like?: [] | null;
+  Like?: [] | null | undefined;
   Retweet?: [];
   conteudo: string;
   id_tweet: string;

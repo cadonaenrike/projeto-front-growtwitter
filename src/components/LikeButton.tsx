@@ -8,7 +8,8 @@ interface LikeButtonProps {
 
 function LikeButton({ tweet }: LikeButtonProps) {
   const [isLiked, setIsLiked] = useState(false);
-  const [likesCount, setLikesCount] = useState<number>(tweet.Like!.length);
+  const initialLikesCount = tweet.Like ? tweet.Like.length : 0;
+  const [likesCount, setLikesCount] = useState<number>(initialLikesCount);
 
   const handleLikeClick = async () => {
     try {
