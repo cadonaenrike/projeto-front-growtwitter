@@ -1,4 +1,5 @@
-# Projeto Front GrowTwitter                                                        ![GrowTwitter Logo](./public/light_color/logo_growtweet.svg)
+# Projeto Front GrowTwitter ![GrowTwitter Logo](./src/public/light_color/logo_growtweet.svg)
+
 ![Screenshot_5](https://github.com/cadonaenrike/projeto-front-growtwitter/assets/95323804/9cdd877a-eb0d-4540-aed4-001532579a4e)
 ![Screenshot_4](https://github.com/cadonaenrike/projeto-front-growtwitter/assets/95323804/0331baba-8f02-4113-bf12-133e71ebbe3c)
 ![Screenshot_6](https://github.com/cadonaenrike/projeto-front-growtwitter/assets/95323804/d57a64a0-690a-468e-8f8c-ad5e165d6ae3)
@@ -77,7 +78,9 @@ O projeto é organizado da seguinte forma:
 - Use os outros scripts para criar uma versão de produção ou verificar a qualidade do código.
 
 ## Licença
+
 Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter detalhes.
 
 ## Autores
+
 Éverton Cadoná

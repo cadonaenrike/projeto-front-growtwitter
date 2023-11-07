@@ -6,8 +6,8 @@ import TweetModal from './Twettar';
 import CardProfile from './CardProfile';
 import LogoutButton from './Logout';
 
-const lightLogoUrl = './public/light_color/logo_growtweet.svg';
-const darkLogoUrl = './public/dark_color/LOGO_GROWTWEET.svg';
+const lightLogoUrl = './src/public/light_color/logo_growtweet.svg';
+const darkLogoUrl = './src/public/dark_color/LOGO_GROWTWEET.svg';
 
 interface NavbarProps {
   navigation: NavigationType[];

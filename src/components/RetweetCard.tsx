@@ -65,7 +65,7 @@ const RetweetList: React.FC<RetweetListProps> = ({ tweet }) => {
     <div>
       <FatherButtonsCards>
         <FatherButtonRetweetCards>
-          <img src="./public/light_color/icone_responder.svg" alt="Criar Retweet" onClick={handleCreateRetweet} />
+          <img src="./src/public/light_color/icone_responder.svg" alt="Criar Retweet" onClick={handleCreateRetweet} />
         </FatherButtonRetweetCards>
         <FatherButtonLikesCards>
           <LikeButton tweet={tweet} />
@@ -91,7 +91,7 @@ const RetweetList: React.FC<RetweetListProps> = ({ tweet }) => {
         <div className="modalReTwitter">
           <div className="card">
             <div className="close-icon" onClick={closeModal}>
-              <img src="./public/light_color/X.svg" alt="Close" />
+              <img src="./src/public/light_color/X.svg" alt="Close" />
             </div>
             <form onSubmit={handleTweet}>
               <div className="divForm">

@@ -62,7 +62,7 @@ const TweetModal = ({ userId = localStorage.getItem('usuarioId'), authToken = se
         <div className="modalTwitter">
           <div className="card">
             <div className="close-icon" onClick={closeModal}>
-              <img src="./public/light_color/X.svg" alt="Close" />
+              <img src="./src/public/light_color/X.svg" alt="Close" />
             </div>
             <form onSubmit={handleTweet}>
               <div className="divForm">

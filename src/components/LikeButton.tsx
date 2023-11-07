@@ -33,7 +33,7 @@ function LikeButton({ tweet }: LikeButtonProps) {
         src={
           isLiked
             ? 'https://growtwitter-chi.vercel.app/assets/icone_curtir_selecionado-c222b3b4.svg'
-            : './public/light_color/icone_curtir.svg'
+            : './src/public/light_color/icone_curtir.svg'
         }
         alt="curtir"
       />
