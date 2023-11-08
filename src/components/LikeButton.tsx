@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CreateLike, DeletLike } from '../services/LikeService';
 import { TweetDTO } from '../interfaces/UsuarioDto';
-import likelogo from '../public/light_color/icone_curtir.svg';
+
 interface LikeButtonProps {
   tweet: TweetDTO;
 }
@@ -30,7 +30,11 @@ function LikeButton({ tweet }: LikeButtonProps) {
     <div>
       <img
         onClick={handleLikeClick}
-        src={isLiked ? 'https://growtwitter-chi.vercel.app/assets/icone_curtir_selecionado-c222b3b4.svg' : likelogo}
+        src={
+          isLiked
+            ? 'https://growtwitter-chi.vercel.app/assets/icone_curtir_selecionado-c222b3b4.svg'
+            : './src/public/light_color/icone_curtir.svg'
+        }
         alt="curtir"
       />
       <span>{likesCount}</span>
