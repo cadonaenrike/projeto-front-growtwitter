@@ -17,18 +17,21 @@ function LoginUserPage() {
     senha: ''
   });
   const [response, setResponse] = useState({ code: 0, message: '' });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
     try {
       const result = await fazerLogin(usuario);
-
       setResponse(result);
       window.location.href = '/';
     } catch (error: any) {
       console.error(error);
       setResponse({ code: 500, message: error.message });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -66,29 +69,26 @@ function LoginUserPage() {
                 />
               </InputGroup>
               <Button type="submit">Entrar</Button>
+              {isLoading && <h2>Loading...</h2>}
+              {response.message && (
+                <div
+                  style={{
+                    color: 'red',
+                    fontSize: '30px'
+                  }}
+                >
+                  Ops...
+                  <br />
+                  <br />
+                  {response.message}
+                </div>
+              )}
               <p>Não Possui conta?</p>
               <a href="/create">Criar conta</a>
             </form>
           </Card>
         </LoginForm>
       </LoginCard>
-
-      {response.message && (
-        <div
-          style={{
-            position: 'absolute',
-            textAlign: 'center',
-            top: '150px',
-            color: 'red',
-            fontSize: '30px'
-          }}
-        >
-          Ops...
-          <br />
-          <br />
-          {response.message}
-        </div>
-      )}
     </LoginDivFather>
   );
 }
