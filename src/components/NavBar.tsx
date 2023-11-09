@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationType } from '../config/navigation';
+
 import { NavBarStyled, Logo } from './StyledComponents/NavBarStyled';
 import { Link, useLocation } from 'react-router-dom';
 import TweetModal from './Twettar';
@@ -7,6 +7,7 @@ import CardProfile from './CardProfile';
 import LogoutButton from './Logout';
 import ligthImg from '../public/light_color/logo_growtweet.svg';
 import DarkImg from '../public/dark_color/LOGO_GROWTWEET.svg';
+import { NavigationType } from '../config/navigation';
 
 const lightLogoUrl = ligthImg;
 const darkLogoUrl = DarkImg;
@@ -28,7 +29,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigation }) => {
         </Logo>
         {navigation.map(item => (
           <Link to={item.url} key={item.url}>
-            <img src={location.pathname === item.url ? `${item.img}_selecionado.svg` : `${item.img}.svg`} />
+            <img src={location.pathname === item.url ? `${item.selected}` : `${item.img}`} />
             <span>{item.label}</span>
           </Link>
         ))}
