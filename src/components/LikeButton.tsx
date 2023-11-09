@@ -31,7 +31,7 @@ function LikeButton({ tweet }: LikeButtonProps) {
       <img
         onClick={handleLikeClick}
         src={isLiked ? 'https://growtwitter-chi.vercel.app/assets/icone_curtir_selecionado-c222b3b4.svg' : imgLiked}
-        alt="curtir"
+        alt="button curtir"
       />
       <span>{likesCount}</span>
     </div>
